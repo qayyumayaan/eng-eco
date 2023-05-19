@@ -1,3 +1,5 @@
+import RetireLib from './RetireLib.js';
+
 new Vue({
     el: '#app',
     data: {
@@ -11,7 +13,7 @@ new Vue({
         "P/G",
         "A/G",
         "Present Arithmetic Gradient (P/A and P/G)",
-        "Present Geometric Gradient"
+        "Present Geometric Gradient (P/A,f)"
         ],
         selectedCalculation: null,
         inputP: 0,

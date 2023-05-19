@@ -1,4 +1,4 @@
-class RetireLib {
+export default class RetireLib {
     static FP(P, i, N) {
       // F/P
       const F = P * Math.pow(1 + i, N);
