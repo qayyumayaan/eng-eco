@@ -34,14 +34,14 @@ new Vue({
     },
     methods: {
         calculate() {
-        const response = parseInt(this.selectedCalculation);
-        const P = parseFloat(this.inputP);
-        const F = parseFloat(this.inputF);
-        const i = parseFloat(this.inputI);
-        const A = parseFloat(this.inputA);
-        const N = parseInt(this.inputN);
-        const G = parseFloat(this.inputG);
-        const f = parseFloat(this.inputf);
+        let response = parseInt(this.selectedCalculation);
+        let P = parseFloat(this.inputP);
+        let F = parseFloat(this.inputF);
+        let i = parseFloat(this.inputI);
+        let A = parseFloat(this.inputA);
+        let N = parseInt(this.inputN);
+        let G = parseFloat(this.inputG);
+        let f = parseFloat(this.inputf);
 
         i = i / 100;
         f = f / 100;
