@@ -4,16 +4,16 @@ new Vue({
     el: '#app',
     data: {
         calculations: [
-        "F/P",
-        "P/F",
-        "F/A",
-        "P/A",
-        "A/F",
-        "A/P",
-        "P/G",
-        "A/G",
-        "Present Arithmetic Gradient (P/A and P/G)",
-        "Present Geometric Gradient (P/A,f)"
+        "Single payment compound amount (F/P, i, N)",
+        "Single payment present worth (P/F, i, N)",
+        "Uniform series compound amount (F/A, i, N)",
+        "Uniform series present worth (P/A, i, N)",
+        "Sinking fund (A/F, i, N)",
+        "Capital recovery (A/P, i, N)",
+        "Arithmetic gradient present worth (P/G, i, N)",
+        "Arithmetic gradient worth per amount (A/G, i, N)",
+        "Uniform arithmetic gradient present worth (P/A + P/G, i, N)",
+        "Geometric gradient present worth (P/A,f, i, N)"
         ],
         selectedCalculation: null,
         inputP: 0,
@@ -44,6 +44,7 @@ new Vue({
         const f = parseFloat(this.inputf);
 
         i = i / 100;
+        f = f / 100;
 
         switch (response) {
             case 0:
