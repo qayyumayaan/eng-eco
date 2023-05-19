@@ -96,6 +96,9 @@ new Vue({
                 this.outputType = null;
                 break;
         }
+            if (isNaN(this.output)) {
+                this.output = 0;
+            }
         
         }
     }

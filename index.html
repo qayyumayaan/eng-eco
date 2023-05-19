@@ -25,13 +25,13 @@
         <label v-if="inputPValues.includes(selectedCalculation)" for="inputP">Enter the Principle amount (P):</label>
         <input v-if="inputPValues.includes(selectedCalculation)" v-model="inputP" id="inputP" type="number" class="form-control" required>
         
-        <label v-if="inputFValues.includes(selectedCalculation)" for="inputF">Enter the final amount (F):</label>
+        <label v-if="inputFValues.includes(selectedCalculation)" for="inputF">Enter the final amount ($F):</label>
         <input v-if="inputFValues.includes(selectedCalculation)" v-model="inputF" id="inputF" type="number" class="form-control" required>
         
         <label v-if="inputIValues.includes(selectedCalculation)" for="inputI">Enter interest rate as a percentage (i%):</label>
         <input v-if="inputIValues.includes(selectedCalculation)" v-model="inputI" id="inputI" type="number" class="form-control" required>
         
-        <label v-if="inputAValues.includes(selectedCalculation)" for="inputA">Enter amount per compounding period (A):</label>
+        <label v-if="inputAValues.includes(selectedCalculation)" for="inputA">Enter amount per compounding period $(A):</label>
         <input v-if="inputAValues.includes(selectedCalculation)" v-model="inputA" id="inputA" type="number" class="form-control" required>
         
         <label v-if="inputNValues.includes(selectedCalculation)" for="inputN">Enter number of compounding periods (N):</label>
@@ -47,8 +47,8 @@
 
         <button class="btn btn-primary mt-3" @click="calculate">Calculate</button>
         <div v-if="output !== null" class="mt-4">
-            <h3>Result:</h3>
-            <p>{{outputType}}: ${{ output.toFixed(2) }}</p>
+            <h1>Result:</h1>
+            <h3>{{outputType}}: ${{ output.toFixed(2) }}</h3>
         </div>
         </div>
 
