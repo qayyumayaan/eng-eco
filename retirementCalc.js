@@ -21,7 +21,14 @@ new Vue({
         inputN: 0,
         inputG: 0,
         inputf: 0,
-        output: null
+        output: null,
+        inputPValues: [0, 2, 3, 5],
+        inputFValues: [1, 4],
+        inputIValues: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        inputAValues: [8, 9],
+        inputNValues: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        inputGValues: [6, 7, 8],
+        inputfValues: [9]
     },
     methods: {
         calculate() {
