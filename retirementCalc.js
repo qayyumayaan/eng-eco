@@ -25,10 +25,10 @@ new Vue({
         inputf: 0,
         output: null,
         outputType: null,
-        inputPValues: [0, 2, 3, 5],
+        inputPValues: [0, 5],
         inputFValues: [1, 4],
         inputIValues: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-        inputAValues: [8, 9],
+        inputAValues: [2, 3, 8, 9],
         inputNValues: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
         inputGValues: [6, 7, 8],
         inputfValues: [9]
@@ -57,11 +57,11 @@ new Vue({
                 this.outputType = "Principle amount (P)"
                 break;
             case 2:
-                this.output = RetireLib.FA(P, i, N);
+                this.output = RetireLib.FA(A, i, N);
                 this.outputType = "Final amount (F)"
                 break;
             case 3:
-                this.output = RetireLib.PA(P, i, N);
+                this.output = RetireLib.PA(A, i, N);
                 this.outputType = "Principle amount (P)"
                 break;
             case 4:
