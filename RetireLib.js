@@ -27,21 +27,21 @@ export default class RetireLib {
     static AF(F, i, N) {
       // A/F
       const intRate = Math.pow(1 + i, N);
-      const A = i / (intRate - 1);
+      const A = F * i / (intRate - 1);
       return A;
     }
   
     static AP(P, i, N) {
       // A/P
       const intRate = Math.pow(1 + i, N);
-      const A = (i * intRate) / (intRate - 1);
+      const A = P * (i * intRate) / (intRate - 1);
       return A;
     }
   
     static PG(G, i, N) {
       // P/G
       const intRate = Math.pow(1 + i, N);
-      const P = ((intRate - 1) / (i * intRate) - N / intRate) / i;
+      const P = G * ((intRate - 1) / (i * intRate) - N / intRate) / i;
       return P;
     }
   
