@@ -24,6 +24,7 @@ new Vue({
         inputG: 0,
         inputf: 0,
         output: null,
+        outputType: null,
         inputPValues: [0, 2, 3, 5],
         inputFValues: [1, 4],
         inputIValues: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -49,38 +50,50 @@ new Vue({
         switch (response) {
             case 0:
                 this.output = RetireLib.FP(P, i, N);
+                this.outputType = "Final amount (F)"
                 break;
             case 1:
                 this.output = RetireLib.PF(F, i, N);
+                this.outputType = "Principle amount (P)"
                 break;
             case 2:
                 this.output = RetireLib.FA(P, i, N);
+                this.outputType = "Final amount (F)"
                 break;
             case 3:
                 this.output = RetireLib.PA(P, i, N);
+                this.outputType = "Principle amount (P)"
                 break;
             case 4:
                 this.output = RetireLib.AF(F, i, N);
+                this.outputType = "Amount per compounding period (A)"
                 break;
             case 5:
                 this.output = RetireLib.AP(P, i, N);
+                this.outputType = "Amount per compounding period (A)"
                 break;
             case 6:
                 this.output = RetireLib.PG(G, i, N);
+                this.outputType = "Principle amount (P)"
                 break;
             case 7:
                 this.output = RetireLib.AG(G, i, N);
+                this.outputType = "Amount per compounding period (A)"
                 break;
             case 8:
                 this.output = RetireLib.PAG(A, G, i, N);
+                this.outputType = "Principle amount (P)"
                 break;
             case 9:
                 this.output = RetireLib.PGGeo(A, i, N, f);
+                this.outputType = "Principle amount (P)"
                 break;
             case 10:
                 this.output = null;
                 break;
             default:
+                this.output = null;
+                this.outputType = null;
                 break;
         }
         
