@@ -43,6 +43,8 @@ new Vue({
         const G = parseFloat(this.inputG);
         const f = parseFloat(this.inputf);
 
+        i = i / 100;
+
         switch (response) {
             case 0:
                 this.output = RetireLib.FP(P, i, N);

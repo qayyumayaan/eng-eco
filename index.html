@@ -22,19 +22,19 @@
         </div>
         <div class="mt-4" v-if="selectedCalculation !== null">
 
-        <label v-if="inputPValues.includes(selectedCalculation)" for="inputP">Enter P:</label>
+        <label v-if="inputPValues.includes(selectedCalculation)" for="inputP">Enter the Principle amount:</label>
         <input v-if="inputPValues.includes(selectedCalculation)" v-model="inputP" id="inputP" type="number" class="form-control" required>
         
-        <label v-if="inputFValues.includes(selectedCalculation)" for="inputF">Enter F:</label>
+        <label v-if="inputFValues.includes(selectedCalculation)" for="inputF">Enter the final amount:</label>
         <input v-if="inputFValues.includes(selectedCalculation)" v-model="inputF" id="inputF" type="number" class="form-control" required>
         
-        <label v-if="inputIValues.includes(selectedCalculation)" for="inputI">Enter i as a decimal:</label>
+        <label v-if="inputIValues.includes(selectedCalculation)" for="inputI">Enter interest rate as a percentage:</label>
         <input v-if="inputIValues.includes(selectedCalculation)" v-model="inputI" id="inputI" type="number" class="form-control" required>
         
-        <label v-if="inputAValues.includes(selectedCalculation)" for="inputA">Enter A:</label>
+        <label v-if="inputAValues.includes(selectedCalculation)" for="inputA">Enter amount per compounding period:</label>
         <input v-if="inputAValues.includes(selectedCalculation)" v-model="inputA" id="inputA" type="number" class="form-control" required>
         
-        <label v-if="inputNValues.includes(selectedCalculation)" for="inputN">Enter N:</label>
+        <label v-if="inputNValues.includes(selectedCalculation)" for="inputN">Enter number of compounding periods:</label>
         <input v-if="inputNValues.includes(selectedCalculation)" v-model="inputN" id="inputN" type="number" class="form-control" required>
         
         <label v-if="inputGValues.includes(selectedCalculation)" for="inputG">Enter G:</label>
