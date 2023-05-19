@@ -100,6 +100,18 @@ new Vue({
                 this.output = 0;
             }
         
+        },
+        reset() {
+            this.inputP = 0,
+            this.inputF = 0,
+            this.inputI = 0,
+            this.inputA = 0,
+            this.inputN = 0,
+            this.inputG = 0,
+            this.inputf = 0
+            this.output = null
+            this.outputType = null
+            this.selectedCalculation = null        
         }
     }
     });
