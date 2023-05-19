@@ -13,10 +13,10 @@ class RetirementCalculator {
         "Present Geometric Gradient"
       ];
   
-      let P = 0;
-      let F = 0;
-      let i = 0;
-      let A = 0;
+      let P = 0; // principle amount
+      let F = 0; // final amount
+      let i = 0; // interest rate
+      let A = 0; 
       let N = 0;
       let G = 0;
       let f = 0;
