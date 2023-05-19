@@ -17,7 +17,10 @@ new Vue({
         inputP: 0,
         inputF: 0,
         inputI: 0,
+        inputA: 0,
         inputN: 0,
+        inputG: 0,
+        inputf: 0,
         output: null
     },
     methods: {
@@ -26,21 +29,49 @@ new Vue({
         const P = parseFloat(this.inputP);
         const F = parseFloat(this.inputF);
         const i = parseFloat(this.inputI);
+        const A = parseFloat(this.inputA);
         const N = parseInt(this.inputN);
+        const G = parseFloat(this.inputG);
+        const f = parseFloat(this.inputf);
 
-        if (response === 0) {
-            this.output = RetireLib.FP(P, i, N);
-        } else if (response === 1) {
-            this.output = RetireLib.PF(F, i, N);
-        } else if (response === 2) {
-            this.output = RetireLib.FA(P, i, N);
-        } else if (response === 3) {
-            this.output = RetireLib.PA(P, i, N);
-        } else if (response === 4) {
-            this.output = RetireLib.AF(F, i, N);
-        } else if (response === 10) {
-            this.output = null;
+        switch (response) {
+            case 0:
+                this.output = RetireLib.FP(P, i, N);
+                break;
+            case 1:
+                this.output = RetireLib.PF(F, i, N);
+                break;
+            case 2:
+                this.output = RetireLib.FA(P, i, N);
+                break;
+            case 3:
+                this.output = RetireLib.PA(P, i, N);
+                break;
+            case 4:
+                this.output = RetireLib.AF(F, i, N);
+                break;
+            case 5:
+                this.output = RetireLib.AP(P, i, N);
+                break;
+            case 6:
+                this.output = RetireLib.PG(G, i, N);
+                break;
+            case 7:
+                this.output = RetireLib.AG(G, i, N);
+                break;
+            case 8:
+                this.output = RetireLib.PAG(A, G, i, N);
+                break;
+            case 9:
+                this.output = RetireLib.PGGeo(A, i, N, f);
+                break;
+            case 10:
+                this.output = null;
+                break;
+            default:
+                break;
         }
+        
         }
     }
     });
