@@ -17,14 +17,29 @@
         </select>
         </div>
         <div class="mt-4" v-if="selectedCalculation !== null">
+
         <label v-if="selectedCalculation !== 10" for="inputP">Enter P:</label>
         <input v-if="selectedCalculation !== 10" v-model="inputP" id="inputP" type="number" class="form-control" required>
+
         <label v-if="selectedCalculation !== 10" for="inputF">Enter F:</label>
         <input v-if="selectedCalculation !== 10" v-model="inputF" id="inputF" type="number" class="form-control" required>
+
         <label for="inputI">Enter i as a decimal:</label>
-        <input v-model="inputI" id="inputI" type="number" step="0.01" class="form-control" required>
+        <input v-model="inputI" id="inputI" type="number" class="form-control" required>
+
+        <label for="inputA">Enter A:</label>
+        <input v-model="inputA" id="inputA" type="number" class="form-control" required>
+
         <label for="inputN">Enter N:</label>
         <input v-model="inputN" id="inputN" type="number" class="form-control" required>
+
+        <label for="inputG">Enter G:</label>
+        <input v-model="inputG" id="inputG" type="number" class="form-control" required>
+
+        <label for="inputF">Enter F:</label>
+        <input v-model="inputF" id="inputF" type="number" class="form-control" required>
+
+
         <button class="btn btn-primary mt-3" @click="calculate">Calculate</button>
         <div v-if="output !== null" class="mt-4">
             <h3>Result:</h3>
@@ -34,54 +49,7 @@
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js"></script>
-    <script src="RetirementCalculator.js"></script>
-    <script>
-        new Vue({
-        el: '#app',
-        data: {
-            calculations: [
-            "F/P",
-            "P/F",
-            "F/A",
-            "P/A",
-            "A/F",
-            "A/P",
-            "P/G",
-            "A/G",
-            "Present Arithmetic Gradient (P/A and P/G)",
-            "Present Geometric Gradient"
-            ],
-            selectedCalculation: null,
-            inputP: 0,
-            inputF: 0,
-            inputI: 0,
-            inputN: 0,
-            output: null
-        },
-        methods: {
-            calculate() {
-            const response = parseInt(this.selectedCalculation);
-            const P = parseFloat(this.inputP);
-            const F = parseFloat(this.inputF);
-            const i = parseFloat(this.inputI);
-            const N = parseInt(this.inputN);
-    
-            if (response === 0) {
-                this.output = RetireLib.FP(P, i, N);
-            } else if (response === 1) {
-                this.output = RetireLib.PF(F, i, N);
-            } else if (response === 2) {
-                this.output = RetireLib.FA(P, i, N);
-            } else if (response === 3) {
-                this.output = RetireLib.PA(P, i, N);
-            } else if (response === 4) {
-                this.output = RetireLib.AF(F, i, N);
-            } else if (response === 10) {
-                this.output = null;
-            }
-            }
-        }
-        });
-    </script>
+
+    <script src="retirementCalc.js"></script>
 </body>     
 </html>
